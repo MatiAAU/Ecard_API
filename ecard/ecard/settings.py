@@ -25,7 +25,7 @@ SECRET_KEY = '#pq3j1ow-^6sojrfe4x5s+a#4)9o%_05du29oh@w97p^m(a__7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'ecard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Ecard',
+        'USER': 'admin',
+        'PASSWORD': 'adminpass1-',
+        'HOST': '34.90.236.29',
+        'PORT': '3306',
     }
 }
 
